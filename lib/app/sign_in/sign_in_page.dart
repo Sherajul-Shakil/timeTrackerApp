@@ -8,8 +8,9 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Time Tracker'),
+        title: const Text('Time Tracker App'),
         elevation: 2.0,
+        centerTitle: true,
       ),
       body: _buildContent(),
       backgroundColor: Colors.grey[200],
@@ -18,7 +19,7 @@ class SignInPage extends StatelessWidget {
 
   Widget _buildContent() {
     return Padding(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -44,7 +45,7 @@ class SignInPage extends StatelessWidget {
             assetName: 'images/facebook-logo.png',
             text: 'Sign in with Facebook',
             textColor: Colors.white,
-            color: Color(0xFF334D92),
+            color: const Color(0xFF334D92),
             onPressed: () {},
           ),
           const SizedBox(height: 8.0),
@@ -54,13 +55,13 @@ class SignInPage extends StatelessWidget {
             color: Colors.teal.shade700,
             onPressed: () {},
           ),
-          SizedBox(height: 8.0),
+          const SizedBox(height: 8.0),
           const Text(
             'or',
             style: TextStyle(fontSize: 14.0, color: Colors.black87),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 8.0),
+          const SizedBox(height: 8.0),
           SignInButton(
             text: 'Go anonymous',
             textColor: Colors.black,
