@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:time_tracker_app/app/sign_in/sign_in_page.dart';
+import 'package:time_tracker_app/app/landing_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -14,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       debugShowCheckedModeBanner: false,
-      home: SignInPage(),
+      home: LandingPage(),
     );
   }
 }
